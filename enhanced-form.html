@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Enhanced HTML5 Form</title>
+    <meta name="description" content="A well-structured, accessible HTML5 form page with lists, tables, and media." />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            line-height: 1.6;
+        }
+
+        form {
+            max-width: 600px;
+            margin-top: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Enhanced HTML5 Form</h1>
+        <p>This page includes a semantic form, accessible layout, and media elements.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Instructions</h2>
+            <ul>
+                <li>Fill out all required fields.</li>
+                <li>Use a valid email address.</li>
+                <li>Submit only once all fields are complete.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form action="/submit" method="post" autocomplete="on">
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required />
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" required />
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required />
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select...</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="canada">Canada</option>
+                </select>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Tell us about yourself..." rows="4" required></textarea>
+
+                <label>
+                    <input type="checkbox" name="agree" required />
+                    I agree to the terms and conditions
+                </label>
+
+                <label for="ref">Referral Code (read-only):</label>
+                <input type="text" id="ref" name="referral" value="AUTO123" readonly />
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Sample Media</h2>
+            <p>Here's a sample image and a short video demonstration:</p>
+            <img src="https://via.placeholder.com/400x200" alt="Sample placeholder image" />
+
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <h2>Pricing Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Price</th>
+                        <th>Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic</td>
+                        <td>$9.99</td>
+                        <td>1 Website, Email Support</td>
+                    </tr>
+                    <tr>
+                        <td>Pro</td>
+                        <td>$19.99</td>
+                        <td>10 Websites, Priority Support</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise</td>
+                        <td>$49.99</td>
+                        <td>Unlimited, Dedicated Support</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Enhanced Form Inc. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
